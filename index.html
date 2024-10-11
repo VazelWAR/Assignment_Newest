@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Acquisition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="parent">
+
+        <canvas id="tubeCanvas"></canvas>
+
+
+        <div class="panel">
+
+            <div class="icon">
+                <h3 style="text-align: center; margin-top: 30px;">Website Icon</h1>
+            </div>
+
+            <div class="data">
+                <p>Instructions For Machine</p>
+                <ul>
+                    <li>Enter Lot Number. (Ex. LN890)</li>
+                    <br>
+                    <li>Enter Sample Weight as recorded on the weighing scale machine.</li>
+                    <br>
+                    <li>Enter the Moisture in percentage(%).</li>
+                    <br>
+                    <li>Select one of the crops shown on the right side of the screen.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="main">
+
+            
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="icon-btn">
+                        <img src="assets/alarm-bell.png" alt="Alarm Bell" class="alarm-img">
+                    </button>
+                </div>
+                <div class="navbar-right">
+                    <button class="home-btn">Home Page</button>
+                    <button class="icon-btn">
+                        <img src="assets/round-account-button-with-user-inside.png" alt="Account" class="acc_img">
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="empty1"></div>            
+
+        
+    </div>
+
+    <div class="empty2">
+        <div class="screen">
+            <video class="rice" id="vid" autoplay="autoplay" loop muted>
+                <source src="assets/Correct.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="loader">
+            
+            <div class="skill">
+
+                <div class="outer">
+                    <div class="inner">
+                        <div id="number" class="f"></div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="one" />
+                </svg>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="outer">
+                    <div class="inner">
+                        <div id="number" class="s">
+                            0%
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="sec" />
+                </svg>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="outer">
+                    <div class="inner">
+                        <div id="number" class="t">
+                            0%
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#DA22FF" />
+                            <stop offset="100%" stop-color="#9733EE" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="80" cy="80" r="70" stroke-linecap="round" class="thir" />
+                </svg>
+
+            </div>
+
+
+        </div>
+
+        <div class="container">
+            <p class="status-text">Image Acquisition is under progress</p>
+            <p class="process-id">Process Requested ID: BRC-123-9987456231-456-12345</p>
+        
+            <div class="progress-bar">
+                <div class="progress" id="prog"></div>
+            </div>
+        </div>
+    </div>
+    <script src="loader.js" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

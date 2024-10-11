@@ -1,0 +1,304 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-btn {
+    position: relative;
+    background: linear-gradient(45deg, #6A5ACD, #00BFFF);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 12px 25px;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.home-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #5A5ACD, #008FFF);
+}
+
+.home-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.home-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon-btn:hover {
+    transform: scale(1.05);
+}
+
+.alarm-img, .acc_img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar {
+    width: 83%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.status-text {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.process-id {
+    font-weight: 600;
+    font-size: 15px;
+    color: #888;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #66BB6A;
+    transition: width 1s ease;
+}
+
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 30vw;
+    background-color: black;
+    position: relative; 
+    z-index: 10;
+}
+
+.rice {
+    padding-right: 50px;
+    height: 100%; 
+}
+
+.single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty1{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.empty2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.panel {
+    height: 140vh;
+    width: 16%;
+    background-color: rgb(237, 233, 233);
+    margin-right: 10px;
+    position: absolute;
+}
+
+.main {
+    width: 84%;
+    margin-left: 16%;
+    padding-top: 60px;
+}
+
+.data {
+    font-size: 9px;
+    margin-top: 200px;
+}
+
+.data p {
+    font-size: 15px;
+    width: 100%;
+}
+
+.data li {
+    font-size: 10px;
+}
+
+.panel ul {
+    padding-left: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        width: 95%;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 60px;
+    }
+
+    .panel {
+        width: 90px;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .screen {
+        height: 250px;
+        width: 30vw;
+        margin-left: 100px;
+    }
+
+    .rice {
+        height: 100%;
+    }
+}
+
+/* Circle Loader CSS */
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), 
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1), 
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+    font-weight: 600;
+    color: #555;
+    font-size: 30px;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+}
+
+.one {
+    animation: anim 10s linear forwards;
+}
+
+.sec {
+    animation: anim 30s linear forwards;
+}
+
+.thir {
+    animation: anim 60s linear forwards;
+}
+
+@keyframes anim {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
